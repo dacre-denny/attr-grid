@@ -1,0 +1,54 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+* {
+    box-sizing: border-box; 
+}
+
+.row, [row] {
+
+    @include clearfix();
+    
+    @include breakpoint($min:$width-lg) {
+
+        width:$width-lg;
+    }
+    @include breakpoint($min:$width-md, $max:$width-lg) {
+
+        width:$width-md;
+    }
+    @include breakpoint($min:$width-sm, $max:$width-md) {
+    
+        width:$width-sm;
+    }
+    @include breakpoint($max:$width-sm) {
+
+        width:100%;
+    }
+    
+    position:relative;
+    margin:0 auto;
+}
+
+@for $i from 1 through 12 {
+
+  [col='#{$i}'], .col-#{$i} {
+    width: (100% * $i / 12);
+  }
+
+   
+}
+
+[class*='col-'], [col] {
+
+	float: left;
+    padding-left: $pad * 0.5;
+    padding-right: $pad * 0.5;
+      
+    @include breakpoint($max:$width-md) {
+        
+        padding-left:0;
+        padding-right:0;
+        width:100%;
+    }
+} 

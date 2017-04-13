@@ -1,0 +1,27 @@
+﻿
+@mixin breakpoint($min:'', $max:'') {
+
+    @if $min != '' and $max != '' {
+        
+        @media (min-width: $min) and (max-width: $max) { @content; }
+    
+    } @else if $min != '' {
+        
+            @media (min-width: $min) { @content; }
+    } @else if $max != '' {
+        
+            @media (max-width: $max) { @content; }
+    }
+}
+
+@mixin clearfix() {
+    
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "css-grid",
+  "version": "1.0.0",
+  "description": "barebones, easy to use, css grid",
+  "scripts": {
+    "scss": "node-sass --output-style nested -o dist src/grid.scss",
+    "build:css": "npm run scss",
+    "watch:css": "onchange \"src\" -- npm run build:css"
+  },
+  "devDependencies": {
+    "lodash": "^3.10.1",
+    "onchange": "^3.2.1"
+  }
+}
