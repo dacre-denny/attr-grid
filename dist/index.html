@@ -15,16 +15,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="grid.css" type="text/css">
+
+    <style>
+        [row] > div:nth-child(odd) {
+            background: #eee;
+        }
+        [row] > div:nth-child(even) {
+            background: #ccc;
+        }
+        [row] { 
+            margin-bottom:10px; 
+        }
+
+        * {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
 </head>
 
 <body>
   
+<div fixed>
+    
   <div row>
-      <div col="4" xs="6">4</div>
-      <div class="col-4">4</div>
-      <div class="col-4">4</div>
+      <div col="4">4</div>
+      <div col="4">4</div>
+      <div col="4">4</div>
+    </div>
+
+  <div row>
+      <div col="3">3</div>
+      <div col="3">3</div>
+      <div col="3">3</div>
+      <div col="3">3</div>
+    </div>
+
+  <div row>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+    </div>
+
+  <div row>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+    </div> 
+
 </div>
 
-  
+  <div row>
+      <div col="4">4</div>
+      <div col="4">4</div>
+      <div col="4">4</div>
+    </div>
+
+  <div row>
+      <div col="3">3</div>
+      <div col="3">3</div>
+      <div col="3">3</div>
+      <div col="3">3</div>
+    </div>
+
+  <div row>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+      <div col="2">2</div>
+    </div>
+
+  <div row>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+      <div col="1">1</div>
+    </div>  
+
+    <div row>
+        <div col-lg="10" col-md="6" col-sm="4" col-xs="2">
+            specify breakpoint columns
+        </div>
+        <div col-lg="2" col-md="6" col-sm="8" col-xs="10">
+            specify breakpoint columns
+        </div>
+    </div>
+    <div row>        
+        <div col="11" col-xs="1">
+            on xs 1
+        </div>    
+        <div col="1" col-xs="11">
+            on xs 1
+        </div>
+    </div>
+    <div row>        
+        <div col="11" col-sm="1">
+            on sm 1
+        </div>
+        <div col="1" col-sm="11">
+            on xs 1
+        </div>
+    </div>
+    <div row>        
+        <div col="11" col-md="1">
+            on md 1
+        </div>
+        <div col="1" col-md="11">
+            on xs 1
+        </div>
+    </div>
+    <div row>        
+        <div col="11" col-lg="1">
+            on lg 1
+        </div>
+        <div col="1" col-lg="11">
+            on xs 1
+        </div>
+    </div>
+    
+    <div row>         
+        <div col-lg="8" col-md="4" col-sm="8" col-xs-block>
+            convenience methods, full-width blocks at different breakpoints
+        </div>   
+        <div col-lg="4" col-md="8" col-sm="4" col-xs-block>
+            convenience methods, full-width blocks at different breakpoints
+        </div>
+    </div>
+    
+    <div row>         
+        <div col-lg="8" col-md="4" col-sm-block col-xs="4">
+            convenience methods, full-width blocks at different breakpoints
+        </div>   
+        <div col-lg="4" col-md="8" col-sm-block col-xs="8">
+            convenience methods, full-width blocks at different breakpoints
+        </div>
+    </div>
+    
+    <div row>         
+        <div col-lg="8" col-md-block col-sm="8" col-xs="4">
+            convenience methods, full-width blocks at different breakpoints
+        </div>   
+        <div col-lg="4" col-md-block col-sm="4" col-xs="8">
+            convenience methods, full-width blocks at different breakpoints
+        </div>
+    </div>
+    
+    <div row>         
+        <div col-lg-block col-md="4" col-sm="8" col-xs="4">
+            convenience methods, full-width blocks at different breakpoints
+        </div>   
+        <div col-lg-block col-md="8" col-sm="4" col-xs="8">
+            convenience methods, full-width blocks at different breakpoints
+        </div>
+    </div>
+
 </body>
 </html>

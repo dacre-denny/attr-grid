@@ -1,54 +1,117 @@
 @import "vars.scss";
 @import "mixins.scss";
 
-* {
-    box-sizing: border-box; 
+@mixin col($width:'') {
+    
+	float: left;
+    box-sizing: border-box;     
+    padding-left: $gutter * 0.5;
+    padding-right: $gutter * 0.5;
+
+    @if $width != '' {
+
+        width: $width;
+    }
+}
+
+.fixed, [fixed] {
+
+    @include lg() {
+
+        width: $width-lg;
+    }
+    @include md() {
+
+        width: $width-md;
+    }
+    @include sm() {
+    
+        width: $width-sm;
+    }
+    @include xs() {
+
+        width: 100%;
+    }
+
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row, [row] {
 
     @include clearfix();
-    
-    @include breakpoint($min:$width-lg) {
-
-        width:$width-lg;
-    }
-    @include breakpoint($min:$width-md, $max:$width-lg) {
-
-        width:$width-md;
-    }
-    @include breakpoint($min:$width-sm, $max:$width-md) {
-    
-        width:$width-sm;
-    }
-    @include breakpoint($max:$width-sm) {
-
-        width:100%;
-    }
-    
-    position:relative;
-    margin:0 auto;
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through $columns {
+
+    $width: (100% * $i / $columns);
 
   [col='#{$i}'], .col-#{$i} {
-    width: (100% * $i / 12);
-  }
+    width: $width;
+  }  
 
-   
+  [col-lg='#{$i}'] {
+      @include lg() {
+        width: $width !important;
+      }
+  }
+  [col-md='#{$i}'] {
+      @include md() {
+        width: $width !important;
+      }
+  }
+  [col-sm='#{$i}'] {
+      @include sm() {
+        width: $width !important;
+      }
+  }
+  [col-xs='#{$i}'] {
+      @include xs() {
+        width: $width !important;
+      }
+  }
 }
 
-[class*='col-'], [col] {
-
-	float: left;
-    padding-left: $pad * 0.5;
-    padding-right: $pad * 0.5;
-      
-    @include breakpoint($max:$width-md) {
-        
+[col-lg-block] {
+    @include lg() {
         padding-left:0;
         padding-right:0;
         width:100%;
     }
+}
+[col-md-block] {
+    @include md() {
+        padding-left:0;
+        padding-right:0;
+        width:100%;
+    }
+}
+[col-sm-block] {
+    @include sm() {
+        padding-left:0;
+        padding-right:0;
+        width:100%;
+    }
+}
+[col-xs-block] {
+    @include xs() {
+        padding-left:0;
+        padding-right:0;
+        width:100%;
+    }
+}
+
+[class*='col-'], 
+[col], 
+[col-xs],
+[col-sm],
+[col-md],
+[col-lg] {
+
+    box-sizing: border-box;     
+
+	float: left;
+    padding-left: $gutter * 0.5;
+    padding-right: $gutter * 0.5;
 } 

@@ -14,6 +14,26 @@
     }
 }
 
+@mixin xs() {
+
+    @include breakpoint($max:$width-sm) { @content; }
+}
+
+@mixin sm() {
+
+    @include breakpoint($min:$width-sm, $max:$width-md) { @content; }
+}
+
+@mixin md() {
+
+    @include breakpoint($min:$width-md, $max:$width-lg) { @content; }
+}
+
+@mixin lg() {
+
+    @include breakpoint($min:$width-lg) { @content; }
+}
+
 @mixin clearfix() {
     
     &:before,
