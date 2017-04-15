@@ -27,33 +27,45 @@ npm run build
 
 ```html
   <div row>
+    <div col="8">8</div>
     <div col="4">4</div>
-    <div col="4">4</div>
-    <div col="4">4</div>
-  </div>
-  <div row>
-    <div col="6">6</div>
-    <div col="6">6</div>
   </div>
   <div row>
     <div col="12">12</div>
   </div>
 ```
+
 ## Fixed grid
 
 ```html
 <div fixed>
   <div row>
-    <div col="4">4</div>
-    <div col="4">4</div>
+    <div col="8">8</div>
     <div col="4">4</div>
   </div>
   <div row>
     <div col="6">6</div>
     <div col="6">6</div>
-  </div>
-  <div row>
-    <div col="12">12</div>
   </div>
 </div>
+```
+
+## Nested grids
+
+```html
+  <div row>
+    <div col="6">
+      <div row>
+        <div col="3">3 in 6</div>
+        <div col="6">6 in 6</div>
+      </div>
+    </div>
+    <div col="6">
+      <div row>
+        <div col="3">3 in 6</div>
+        <div col="3">3 in 6</div>
+        <div col="3">3 in 6</div>
+      </div>
+    </div>
+  </div>
 ```
