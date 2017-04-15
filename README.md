@@ -23,7 +23,7 @@ npm run build
 
 ### Usage
 
-# Fluid grid
+#### Fluid grid
 
 ```html
   <div row>
@@ -35,7 +35,7 @@ npm run build
   </div>
 ```
 
-# Fixed grid
+#### Fixed grid
 
 ```html
 <div fixed>
@@ -50,7 +50,7 @@ npm run build
 </div>
 ```
 
-# Nested grids
+#### Nested grids
 
 ```html
   <div row>
