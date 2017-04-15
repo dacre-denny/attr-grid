@@ -3,6 +3,7 @@
 css-grid is a super simple, unobtrusive & light weight responsive grid.
 
 No resets, defaults, or extra utility classes - just an easy to use and easy to comprehend, 12 column grid system. css-grid uses attributes rather than conventional css classes, to define the grid.
+[View Demo](https://rawgit.com/mooce/css-grid/master/dist/index.html)
 
 ### Why?
 
