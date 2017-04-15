@@ -3,7 +3,7 @@
 css-grid is a super simple, unobtrusive & light weight responsive grid.
 
 No resets, defaults, or extra utility classes - just an easy to use and easy to comprehend, 12 column grid system. css-grid uses attributes rather than conventional css classes, to define the grid.
-[View Demo](https://rawgit.com/mooce/css-grid/master/dist/index.html)
+[View Demo](https://rawgit.com/mooce/css-grid/master/index.html)
 
 ### Why?
 
@@ -21,6 +21,26 @@ Build the stylesheet.
 ```
 npm run build
 ```
+
+### Installation
+
+#### Link stylesheet
+
+Add the following to your HTML's `<head>` section:
+
+```html
+    <link rel="stylesheet" href="/dist/grid.css" type="text/css">
+```
+
+#### Viewport scales
+
+Add the following to your HTML's `<head>` section:
+
+```html
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+```
+
+This meta tag ensures mobile and tablet resize page content to match the devices actual viewport width.
 
 ### Usage
 
