@@ -1,7 +1,7 @@
 {
-  "name": "css-grid",
+  "name": "attr-grid",
   "version": "1.0.0",
-  "description": "barebones, easy to use, css grid",
+  "description": "simple, unobtrusive, attribute based grid",
   "scripts": {
     "scss": "node-sass --source-map true --output-style compressed -o dist src/grid.scss",
     "build": "npm run scss",
