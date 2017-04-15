@@ -4,17 +4,8 @@
     <title>Demo</title>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Mooce - Web &amp; Mobile Development - www.mooce.co.nz">
-    <meta name="image" content="/assets/img/favicon.png" />
-    <meta name="thumbnail" content="/assets/img/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="grid.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="dist/grid.css" type="text/css">
 
     <style>
         [row] > div:nth-child(odd) {
@@ -27,9 +18,16 @@
             margin-bottom:10px; 
         }
 
-        * {
+        [col], 
+        [col-xs],
+        [col-sm],
+        [col-md],
+        [col-lg] {
+            padding: 1rem;
             overflow: hidden;
             white-space: nowrap;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
@@ -78,6 +76,11 @@
 </div>
 
   <div row>
+      <div col="6">6</div>
+      <div col="6">6</div>
+    </div>
+
+  <div row>
       <div col="4">4</div>
       <div col="4">4</div>
       <div col="4">4</div>
@@ -115,10 +118,10 @@
     </div>  
 
     <div row>
-        <div col-lg="10" col-md="6" col-sm="4" col-xs="2">
+        <div col-lg="8" col-md="6" col-sm="4" col-xs="2">
             specify breakpoint columns
         </div>
-        <div col-lg="2" col-md="6" col-sm="8" col-xs="10">
+        <div col-lg="4" col-md="6" col-sm="8" col-xs="10">
             specify breakpoint columns
         </div>
     </div>
@@ -190,6 +193,26 @@
             convenience methods, full-width blocks at different breakpoints
         </div>
     </div>
+
+  <div row>
+      <div col="8">
+
+        <div row>
+            <div col="6">nested 6 in 8</div>
+            <div col="6">nested 6 in 8</div>
+        </div>
+
+      </div>
+      <div col="4">
+          
+        <div row>
+            <div col="3">nested 3 in 4</div>
+            <div col="6">nested 9 in 4</div>
+        </div>
+
+      </div>
+    </div>
+    
 
 </body>
 </html>

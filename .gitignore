@@ -1,3 +1,5 @@
 /node_modules
 
 *.log
+*npm-log*
+/dist/*.css

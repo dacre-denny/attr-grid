@@ -34,7 +34,7 @@
     @include breakpoint($min:$width-lg) { @content; }
 }
 
-@mixin clearfix() {
+@mixin row() {
     
     &:before,
     &:after {
@@ -44,4 +44,11 @@
     &:after {
         clear: both;
     }
+}
+
+@mixin block() {
+
+    padding-left:0;
+    padding-right:0;
+    width:100%;
 }
