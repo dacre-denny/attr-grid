@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "simple, unobtrusive, attribute based grid",
   "keywords": [
-    "grid", "css", "attribute", "layout"
+    "grid",
+    "css",
+    "attribute",
+    "layout"
   ],
   "homepage": "https://github.com/mooce/attr-grid",
   "author": {
-    "name" : "Dacre Denny",
+    "name": "Dacre Denny",
     "email": "dacre@mooce.co.nz",
-    "url":"http://www.mooce.co.nz/"
+    "url": "http://www.mooce.co.nz/"
   },
   "license": "MIT",
   "scripts": {
@@ -18,6 +21,7 @@
     "watch": "onchange \"src\" -- npm run build"
   },
   "devDependencies": {
+    "node-sass": "^4.5.2",
     "onchange": "^3.2.1"
   }
 }
