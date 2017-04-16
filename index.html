@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Demo</title>
+    <title>attr-grid</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <link rel="stylesheet" href="dist/grid.css" type="text/css">
 
     <style>
+
+        h3 {
+            margin-top: 4rem;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+        }
+
+        div {
+            color: rgba(0,0,0,0.25);
+            text-align: center;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
         [row] > div:nth-child(odd) {
             background: #eee;
         }
@@ -26,193 +41,244 @@
             padding: 1rem;
             overflow: hidden;
             white-space: nowrap;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
 
 <body>
   
+<h3>Fixed grid:</h3>
+
 <div fixed>
     
   <div row>
-      <div col="4">4</div>
-      <div col="4">4</div>
-      <div col="4">4</div>
+      <div col="4">four column</div>
+      <div col="4">four column</div>
+      <div col="4">four column</div>
     </div>
 
   <div row>
-      <div col="3">3</div>
-      <div col="3">3</div>
-      <div col="3">3</div>
-      <div col="3">3</div>
+      <div col="3">three column</div>
+      <div col="3">three column</div>
+      <div col="3">three column</div>
+      <div col="3">three column</div>
     </div>
 
   <div row>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
     </div>
 
   <div row>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
     </div> 
 
 </div>
 
+<h3>Fluid grid:</h3>
+
   <div row>
-      <div col="6">6</div>
-      <div col="6">6</div>
+      <div col="6">six column</div>
+      <div col="6">six column</div>
     </div>
 
   <div row>
-      <div col="4">4</div>
-      <div col="4">4</div>
-      <div col="4">4</div>
+      <div col="4">four column</div>
+      <div col="4">four column</div>
+      <div col="4">four column</div>
     </div>
 
   <div row>
-      <div col="3">3</div>
-      <div col="3">3</div>
-      <div col="3">3</div>
-      <div col="3">3</div>
+      <div col="3">three column</div>
+      <div col="3">three column</div>
+      <div col="3">three column</div>
+      <div col="3">three column</div>
     </div>
 
   <div row>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
-      <div col="2">2</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
+      <div col="2">two column</div>
     </div>
 
   <div row>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
-      <div col="1">1</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
+      <div col="1">one column</div>
     </div>  
+    
+    <h3>Mixture of column widths at specific breakpoints:</h3>
 
     <div row>
         <div col-lg="8" col-md="6" col-sm="4" col-xs="2">
-            specify breakpoint columns
+            explicity eight column on lg breakpoint, 
+            explicity six column on md breakpoint, 
+            explicity four column on sm breakpoint,
+            explicity two column on xs breakpoint
         </div>
         <div col-lg="4" col-md="6" col-sm="8" col-xs="10">
-            specify breakpoint columns
+            explicity four column on lg breakpoint, 
+            explicity six column on md breakpoint, 
+            explicity eight column on sm breakpoint,
+            explicity ten column on xs breakpoint
         </div>
     </div>
+    
+    <h3>Column widths at specific breakpoint:</h3>
+
     <div row>        
         <div col="11" col-xs="1">
-            on xs 1
+            eleven column, one on xs breakpoint
         </div>    
         <div col="1" col-xs="11">
-            on xs 1
+            one column, eleven on xs breakpoint
         </div>
     </div>
     <div row>        
         <div col="11" col-sm="1">
-            on sm 1
+            eleven column, one on sm breakpoint
         </div>
         <div col="1" col-sm="11">
-            on xs 1
+            one column, eleven on sm breakpoint
         </div>
     </div>
     <div row>        
         <div col="11" col-md="1">
-            on md 1
+            eleven column, one on md breakpoint
         </div>
         <div col="1" col-md="11">
-            on xs 1
+            one column, eleven on md breakpoint
         </div>
     </div>
     <div row>        
         <div col="11" col-lg="1">
-            on lg 1
+            eleven column, one on lg breakpoint
         </div>
         <div col="1" col-lg="11">
-            on xs 1
+            one column, eleven on lg breakpoint
         </div>
     </div>
+
+    <h3>Full width block at specific breakpoint:</h3>
+    
+    <div row>         
+        <div col="8" col-md-block>
+            eight column, full width on md breakpoint
+        </div>   
+        <div col="4" col-md-block>
+            four column, full width on md breakpoint
+        </div>
+    </div>
+
+    <h3>Mixed specific column widths per breakpoint, full with block at specific breakpoint:</h3>
     
     <div row>         
         <div col-lg="8" col-md="4" col-sm="8" col-xs-block>
-            convenience methods, full-width blocks at different breakpoints
+            explicity eight column on lg breakpoint, 
+            explicity four column on md breakpoint, 
+            explicity eight column on sm breakpoint,
+            full width on xs breakpoint 
         </div>   
         <div col-lg="4" col-md="8" col-sm="4" col-xs-block>
-            convenience methods, full-width blocks at different breakpoints
+            explicity four column on lg breakpoint, 
+            explicity eight column on md breakpoint, 
+            explicity four column on sm breakpoint,
+            full width on xs breakpoint 
         </div>
     </div>
     
     <div row>         
         <div col-lg="8" col-md="4" col-sm-block col-xs="4">
-            convenience methods, full-width blocks at different breakpoints
+            explicity eight column on lg breakpoint, 
+            explicity four column on md breakpoint, 
+            full width on sm breakpoint, 
+            explicity four column on xs breakpoint
         </div>   
         <div col-lg="4" col-md="8" col-sm-block col-xs="8">
-            convenience methods, full-width blocks at different breakpoints
+            explicity four column on lg breakpoint, 
+            explicity eight column on md breakpoint, 
+            full width on sm breakpoint, 
+            explicity eight column on xs breakpoint
         </div>
     </div>
     
     <div row>         
         <div col-lg="8" col-md-block col-sm="8" col-xs="4">
-            convenience methods, full-width blocks at different breakpoints
+            explicity eight column on lg breakpoint, 
+            full width on md breakpoint, 
+            explicity eight column on sm breakpoint, 
+            explicity four column on xs breakpoint
         </div>   
         <div col-lg="4" col-md-block col-sm="4" col-xs="8">
-            convenience methods, full-width blocks at different breakpoints
+            explicity four column on lg breakpoint, 
+            full width on md breakpoint, 
+            explicity four column on sm breakpoint, 
+            explicity eight column on xs breakpoint
         </div>
     </div>
     
     <div row>         
         <div col-lg-block col-md="4" col-sm="8" col-xs="4">
-            convenience methods, full-width blocks at different breakpoints
+            full width on lg breakpoint, 
+            explicity four column on md breakpoint, 
+            explicity eight column on sm breakpoint, 
+            explicity four column on xs breakpoint
         </div>   
         <div col-lg-block col-md="8" col-sm="4" col-xs="8">
-            convenience methods, full-width blocks at different breakpoints
+            full width on lg breakpoint, 
+            explicity eight column on md breakpoint, 
+            explicity four column on sm breakpoint, 
+            explicity eight column on xs breakpoint
         </div>
     </div>
+
+    <h3>Nested grids:</h3>
 
   <div row>
       <div col="8">
 
         <div row>
-            <div col="6">nested 6 in 8</div>
-            <div col="6">nested 6 in 8</div>
+            <div col="6">nested six column in eight column</div>
+            <div col="6">nested six column in eight column</div>
         </div>
 
       </div>
       <div col="4">
           
         <div row>
-            <div col="3">nested 3 in 4</div>
-            <div col="6">nested 9 in 4</div>
+            <div col="3">nested three column in four column</div>
+            <div col="6">nested six column in four column</div>
         </div>
 
       </div>
     </div>
     
-
 </body>
 </html>
