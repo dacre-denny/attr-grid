@@ -1,21 +1,27 @@
 # attr-grid
 
-attr-grid is a super simple, unobtrusive & light weight responsive grid.
+attr-grid is a super simple, unobtrusive, responsive grid.
 
-No resets, defaults, or extra utility classes - just an easy to use and easy to comprehend, 12 column grid system. attr-grid uses attributes rather than conventional css classes, to define the grid.
+This is only a grid - no css resets, defaults, or extras. Hopefully this makes it easy to use (and easy to comprehend/modify for your projects). 
+attr-grid uses attributes rather than the class based css rules that are normally used in other grid systems.
+
 [View Demo](https://rawgit.com/mooce/attr-grid/master/index.html)
 
 ## Why?
 
-I was looking around for an unobtrusive, lightweight grid system for a couple of projects I was working on. I eventually built a simple grid, and, after working with [Angular Material's grid system](https://material.angularjs.org/latest/layout/introduction), I was inspired by the use of attributes to achieve responsive grid  control. attr-grid is an attribute based adaption of my original simple grid system.
+A while back I was looking for a simple "grid-only" stylesheet for a couple of projects I was working on. I didn't need the extras that typically come with other grids. I just needed something simple, like this!
 
-## Grid system
+I ended up building a simple grid and, after working with [Angular Material's grid system](https://material.angularjs.org/latest/layout/introduction), was inspired by the use of attributes to achieve responsive grid control to build attr-grid. 
 
-attr-grid is a 12 column grid system. 
+So in short, attr-grid is an attribute based adaption of my original grid system.
+
+## Grid system defaults
+
+12 column grid system. 
 
 Columns are spaced with a `10px` gutter.
 
-Breakpoints for attr-grid are:
+Breakpoints are:
 
 - sm: 600px
 - md: 960px
@@ -66,7 +72,7 @@ Use the `row` attribute on element to define a grid row. Add a `col` attribute t
     <div col="4">four column</div>
   </div>
   <div row>
-    <div col="12">tweleve column</div>
+    <div col="12">twelve column</div>
   </div>
 ```
 
