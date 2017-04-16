@@ -2,13 +2,22 @@
   "name": "attr-grid",
   "version": "1.0.0",
   "description": "simple, unobtrusive, attribute based grid",
+  "keywords": [
+    "grid", "css", "attribute", "layout"
+  ],
+  "homepage": "https://github.com/mooce/attr-grid",
+  "author": {
+    "name" : "Dacre Denny",
+    "email": "dacre@mooce.co.nz",
+    "url":"http://www.mooce.co.nz/"
+  },
+  "license": "MIT",
   "scripts": {
     "scss": "node-sass --source-map true --output-style compressed -o dist src/grid.scss",
     "build": "npm run scss",
     "watch": "onchange \"src\" -- npm run build"
   },
   "devDependencies": {
-    "lodash": "^3.10.1",
     "onchange": "^3.2.1"
   }
 }
