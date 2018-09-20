@@ -67,13 +67,13 @@ This meta tag ensures mobile and tablet resize page content to match the devices
 Use the `row` attribute on element to define a grid row. Add a `col` attribute to specify the column's width under that row:
 
 ```html
-  <div row>
-    <div col="8">eight column</div>
-    <div col="4">four column</div>
-  </div>
-  <div row>
-    <div col="12">twelve column</div>
-  </div>
+<div row>
+  <div col="8">eight column</div>
+  <div col="4">four column</div>
+</div>
+<div row>
+  <div col="12">twelve column</div>
+</div>
 ```
 
 #### Fixed grid
@@ -98,21 +98,21 @@ Use the `fixed` attribute on element wrapping the grid to achieve a center fixed
 Nested grids are supported:
 
 ```html
-  <div row>
-    <div col="6">
-      <div row>
-        <div col="3">3 column in 6 column</div>
-        <div col="6">6 column in 6 column</div>
-      </div>
-    </div>
-    <div col="6">
-      <div row>
-        <div col="3">3 column in 6 column</div>
-        <div col="3">3 column in 6 column/div>
-        <div col="3">3 column in 6 column</div>
-      </div>
+<div row>
+  <div col="6">
+    <div row>
+      <div col="3">3 column in 6 column</div>
+      <div col="6">6 column in 6 column</div>
     </div>
   </div>
+  <div col="6">
+    <div row>
+      <div col="3">3 column in 6 column</div>
+      <div col="3">3 column in 6 column/div>
+      <div col="3">3 column in 6 column</div>
+    </div>
+  </div>
+</div>
 ```
 
 #### Grid utilities
@@ -120,12 +120,12 @@ Nested grids are supported:
 Maybe you need full width blocks, at certian breakpoints? No worries! Here's how:
 
 ```html
-  <div row>
-    <div col="8" col-md-block>eight column, full width on md breakpoint</div>
-    <div col="4" col-md-block>four column, full width on md breakpoint</div>
-  </div>
-  <div row>
-    <div col="6" col-sm-block>six column, full width on sm breakpoint</div>
-    <div col="6" col-sm-block>six column, full width on sm breakpoint</div>
-  </div>
+<div row>
+  <div col="8" col-md-block>eight column, full width on md breakpoint</div>
+  <div col="4" col-md-block>four column, full width on md breakpoint</div>
+</div>
+<div row>
+  <div col="6" col-sm-block>six column, full width on sm breakpoint</div>
+  <div col="6" col-sm-block>six column, full width on sm breakpoint</div>
+</div>
 ```
