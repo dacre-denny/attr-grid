@@ -47,7 +47,7 @@ npm run build
 Add the following to your HTML's `<head>` section:
 
 ```html
-    <link rel="stylesheet" href="/dist/grid.css" type="text/css">
+<link rel="stylesheet" href="/dist/grid.css" type="text/css">
 ```
 
 #### Viewport scales
@@ -55,7 +55,7 @@ Add the following to your HTML's `<head>` section:
 Add the following to your HTML's `<head>` section:
 
 ```html
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
+<meta name="viewport" content="width=device-width, initial-scale=1">   
 ```
 
 This meta tag ensures mobile and tablet resize page content to match the devices actual viewport width.
